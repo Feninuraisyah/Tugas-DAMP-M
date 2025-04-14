@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #9d50bb, #6e48aa, #fc6076, #ff9a44);
+  color: white;
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+}
+
+nav a.active {
+  background: #00c4ff;
+  color: black;
+  border-radius: 4px;
+}
+
+.about {
+display: flex;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content: center; /* ubah nanti di media query */
+padding: 2rem 5%;
+gap: 2rem;
+margin: 5rem auto 2rem auto;
+}
+
+.image-container {
+flex: 1 1 40%;
+display: flex;
+justify-content: flex-end;
+}
+
+.image-wrapper {
+background-color: rgba(255, 255, 255, 0.1);
+padding: 1rem;
+border-radius: 20px;
+width: 100%;
+max-width: 580px; /* diperbesar */
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper img {
+width: 100%;
+display: block;
+margin-top: -10rem; /* dikurangi agar tidak terlalu tinggi */
+border-radius: 10px;
+}
+
+.bio {
+flex: 1 1 50%;
+max-width: 600px;
+padding-top: 1rem;
+}
+
+
+.bio h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  width: 150px;
+  height: 6px;
+  background: #00cfff;
+  margin-bottom: 1rem;
+}
+
+.bio p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.bio h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills span {
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: right;
+  margin-top: 5rem;
+  padding: 1rem 3rem;
+  font-size: 0.9rem;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .about {
+    justify-content: space-between;
+    padding: 3rem 18%;
+    gap: 3rem;
+    padding-bottom: 12rem;
+    padding-top: 0rem;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer {
+    text-align: right;
+    margin-top: 10rem;
+    padding: 1rem 3rem;
+    font-size: 0.9rem;
+    color: white;
+  }
+}
+
+  .bio {
+    padding-left: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 0rem;
+    }
+  
+    .image-wrapper img {
+      margin-top: -4rem; /* kurangi sedikit agar tidak terlalu naik di layar kecil */
+    }
+  
+    .bio {
+      max-width: 100%;
+    }
+
+    .line {
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  footer h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  footer p {
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    padding-left: 1rem;
+  }
+}
